@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>registration</title>
+</head>
+<body>
+<div>
+    <h3>registration</h3>
+    {{#message}}
+        {{message}}
+     {{/message}}
+    <form method="post" action="/registration">
+        <div><label>User name:<input name="username" type="text" /></label></div>
+        <div><label>Password:<input type="password" name="password"/></label></div>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <div><button type="submit">sign up</button></div>
+    </form>
+</div>
+</body>
+</html>
